@@ -42,18 +42,17 @@ class MyApp extends StatelessWidget {
           fontFamily: 'Inter',
         ),
         debugShowCheckedModeBanner: false,
-        home:DeliveryPartnerLoginScreen()
-        
-        //RestaurantLoginScreen()
-        
-        /* BlocBuilder<AuthBloc, AuthState>(
+        home: BlocBuilder<AuthBloc, AuthState>(
           builder: (context, state) {
             if (state is AuthSuccess) {
               return const HomeScreen();
             }
             return const UserLoginScreen();
           },
-        ),*/
+        ),
+
+        //RestaurantLoginScreen()
+        //DeliveryPartnerLoginScreen()
       ),
     );
   }
