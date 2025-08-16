@@ -215,11 +215,20 @@ mini_zomato/
 ```
 ## 🚀 Quick Start Guide
 
+## **📋 Prerequisites**
+Flutter SDK (version 3.x or higher)
+
+An IDE like VS Code or Android Studio
+
+A running emulator or a physical device
+
+
+
 Follow these steps to set up the project locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/mini-zomato-platform.git
+git clone https://github.com/gopal5587/Mini-Zomato-platform.git
 
 # Navigate to the project directory
 cd mini-zomato-platform
@@ -230,3 +239,24 @@ flutter pub get
 # Run the User app (repeat for other apps)
 flutter run
 ```
+## **🧪 Testing the Apps**
+To test a specific app, open ```bash lib/main.dart```  and set the ```bash home``` property to the desired login screen.
+
+### 👤 User App:
+
+-Screen: ```bash UserLoginScreen()```
+
+-Credentials: Any non-empty email and a password of 6+ characters.
+
+### 👨‍💼 Restaurant App:
+
+- ## Screen: ```bash RestaurantLoginScreen()```
+
+- ## Credentials: ```bash test@restaurant.com / password```
+
+🛵 Delivery Partner App:
+
+Screen: ```bash DeliveryPartnerLoginScreen()```
+
+Credentials: ```bash partner@test.com / password```
+
