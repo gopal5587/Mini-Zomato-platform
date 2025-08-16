@@ -43,7 +43,7 @@ It features:
 - Scalable *feature-driven architecture*  
 - Built with a *mock-first development* approach for testing without backend dependencies  
 
----
+
 
 ## ✨ What Makes Mini Zomato Special?
 ✅ *Triple-App Architecture* — Tailored apps for Customers, Restaurant Owners, and Delivery Partners within a single project.  
@@ -211,6 +211,7 @@ mini_zomato/
 │
 └── pubspec.yaml
 ```
+---
 ## 🚀 Quick Start Guide
 
 ## **📋 Prerequisites**
@@ -233,6 +234,7 @@ flutter pub get
 # Run the User app (repeat for other apps)
 flutter run
 ```
+---
 ###  **🧪 Testing the Apps**
 To test a specific app, open ```bash lib/main.dart```  and set the ```bash home``` property to the desired login screen.
 
