@@ -216,15 +216,11 @@ mini_zomato/
 ## 🚀 Quick Start Guide
 
 ## **📋 Prerequisites**
-Flutter SDK (version 3.x or higher)
+-Flutter SDK (version 3.x or higher)
+-An IDE like VS Code or Android Studio
+-A running emulator or a physical device
 
-An IDE like VS Code or Android Studio
-
-A running emulator or a physical device
-
-
-
-Follow these steps to set up the project locally:
+### Follow these steps to set up the project locally:
 
 ```bash
 # Clone the repository
@@ -239,24 +235,40 @@ flutter pub get
 # Run the User app (repeat for other apps)
 flutter run
 ```
-## **🧪 Testing the Apps**
+###  **🧪 Testing the Apps**
 To test a specific app, open ```bash lib/main.dart```  and set the ```bash home``` property to the desired login screen.
 
 ### 👤 User App:
 
 -Screen: ```bash UserLoginScreen()```
-
 -Credentials: Any non-empty email and a password of 6+ characters.
 
 ### 👨‍💼 Restaurant App:
 
-- ## Screen: ```bash RestaurantLoginScreen()```
+-  Screen: ```bash RestaurantLoginScreen()```
+- Credentials: ```bash test@restaurant.com / password```
 
-- ## Credentials: ```bash test@restaurant.com / password```
+### 🛵 Delivery Partner App:
 
-🛵 Delivery Partner App:
+-Screen: ```bash DeliveryPartnerLoginScreen()```
+-Credentials: ```bash partner@test.com / password```
 
-Screen: ```bash DeliveryPartnerLoginScreen()```
+### 🤝 ***Contributing**
+Contributions are welcome! Please feel free to open an issue or submit a pull request.
 
-Credentials: ```bash partner@test.com / password```
+1. Fork the repository
+2. Create your feature branch (```bash git checkout -b feature/AmazingFeature```)
+3. Commit your changes (```bash git commit -m 'Add some AmazingFeature'```)
+4. Push to the branch (```bash git push origin feature/AmazingFeature```)
+5. Open a Pull Request
 
+---
+### 📄 **License**
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+---
+<div align="center">
+
+### **🌟 Star this repository if you found it helpful!**
+**Built with ❤ by Gopal**
+
+</div>
