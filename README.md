@@ -237,7 +237,11 @@ flutter run
 ```
 ---
 ###  **🧪 Testing the Apps**
-To test a specific app, open ```bash lib/main.dart```  and set the ```bash home``` property to the desired login screen.
+To test a specific app, open ```
+lib/main.dart
+```  and set the ```bash 
+home
+``` property to the desired login screen.
 
 ### 👤 User App:
 
