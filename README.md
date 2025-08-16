@@ -57,7 +57,7 @@ It features:
 ---
 
 ## ⚡ Core Features
-<div align="center">
+<div>
 
 ### 📱 User App
 - Secure User Login  
@@ -114,7 +114,7 @@ mini_zomato/
 ├── lib/
 │   ├── main.dart
 │   │
-│   ├── core/                  # Core utilities, constants, and theme
+│   ├── core/                  
 │   │   ├── constants/
 │   │   │   └── app_constants.dart
 │   │   ├── theme/
@@ -122,7 +122,7 @@ mini_zomato/
 │   │   └── utils/
 │   │       └── ...
 │   │
-│   ├── data/                  # Data layer: repositories, models, data sources
+│   ├── data/                
 │   │   ├── models/
 │   │   │   ├── user_model.dart
 │   │   │   ├── restaurant_model.dart
@@ -137,11 +137,11 @@ mini_zomato/
 │   │   │
 │   │   └── data_sources/
 │   │       ├── remote/
-│   │       │   └── api_service.dart  # For network requests
+│   │       │   └── api_service.dart  
 │   │       └── local/
-│   │           └── ...             # For local data if needed
+│   │           └── ...            
 │   │
-│   ├── presentation/          # UI Layer: Screens, Widgets, and BLoCs
+│   ├── presentation/         
 │   │   │
 │   │   ├── user_app/
 │   │   │   ├── bloc/
