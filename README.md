@@ -113,23 +113,120 @@ It features:
 
 ```bash
 mini_zomato/
-└── lib/
-    ├── data/
-    │   └── models/
-    │       ├── user_model.dart
-    │       ├── restaurant_model.dart
-    │       ├── menu_item_model.dart
-    │       └── order_model.dart
-    │
-    └── presentation/
-        ├── user_app/
-        │   ├── bloc/
-        │   └── screens/
-        │
-        ├── restaurant_app/
-        │   ├── bloc/
-        │   └── screens/
-        │
-        └── delivery_partner_app/
-            ├── bloc/
-            └── screens/
+├── lib/
+│   ├── main.dart
+│   │
+│   ├── core/                  # Core utilities, constants, and theme
+│   │   ├── constants/
+│   │   │   └── app_constants.dart
+│   │   ├── theme/
+│   │   │   └── app_theme.dart
+│   │   └── utils/
+│   │       └── ...
+│   │
+│   ├── data/                  # Data layer: repositories, models, data sources
+│   │   ├── models/
+│   │   │   ├── user_model.dart
+│   │   │   ├── restaurant_model.dart
+│   │   │   ├── menu_item_model.dart
+│   │   │   ├── order_model.dart
+│   │   │   └── ...
+│   │   │
+│   │   ├── repositories/
+│   │   │   ├── auth_repository.dart
+│   │   │   ├── restaurant_repository.dart
+│   │   │   └── order_repository.dart
+│   │   │
+│   │   └── data_sources/
+│   │       ├── remote/
+│   │       │   └── api_service.dart  # For network requests
+│   │       └── local/
+│   │           └── ...             # For local data if needed
+│   │
+│   ├── presentation/          # UI Layer: Screens, Widgets, and BLoCs
+│   │   │
+│   │   ├── user_app/
+│   │   │   ├── bloc/
+│   │   │   │   ├── auth/
+│   │   │   │   │   ├── auth_bloc.dart
+│   │   │   │   │   ├── auth_event.dart
+│   │   │   │   │   └── auth_state.dart
+│   │   │   │   ├── restaurant_list/
+│   │   │   │   │   └── ...
+│   │   │   │   ├── menu/
+│   │   │   │   │   └── ...
+│   │   │   │   ├── cart/
+│   │   │   │   │   └── ...
+│   │   │   │   ├── order/
+│   │   │   │   │   └── ...
+│   │   │   │   └── order_history/
+│   │   │   │       └── ...
+│   │   │   │
+│   │   │   ├── screens/
+│   │   │   │   ├── login_screen.dart
+│   │   │   │   ├── home_screen.dart
+│   │   │   │   ├── restaurant_details_screen.dart
+│   │   │   │   ├── cart_screen.dart
+│   │   │   │   └── my_orders_screen.dart
+│   │   │   │
+│   │   │   └── widgets/
+│   │   │       ├── restaurant_card.dart
+│   │   │       └── menu_item.dart
+│   │   │
+│   │   ├── restaurant_app/
+│   │   │   ├── bloc/
+│   │   │   │   ├── auth/
+│   │   │   │   │   └── ...
+│   │   │   │   ├── incoming_orders/
+│   │   │   │   │   └── ...
+│   │   │   │   ├── order_action/
+│   │   │   │   │   └── ...
+│   │   │   │   └── menu_management/
+│   │   │   │       └── ...
+│   │   │   │
+│   │   │   ├── screens/
+│   │   │   │   ├── login_screen.dart
+│   │   │   │   ├── dashboard_screen.dart
+│   │   │   │   └── menu_management_screen.dart
+│   │   │   │
+│   │   │   └── widgets/
+│   │   │       └── order_card.dart
+│   │   │
+│   │   └── delivery_partner_app/
+│   │       ├── bloc/
+│   │       │   ├── auth/
+│   │       │   │   └── ...
+│   │       │   ├── delivery_orders/
+│   │       │   │   └── ...
+│   │       │   ├── delivery_status/
+│   │       │   │   └── ...
+│   │       │   └── map/
+│   │       │       └── ...
+│   │       │
+│   │       ├── screens/
+│   │       │   ├── login_screen.dart
+│   │       │   ├── assigned_orders_screen.dart
+│   │       │   └── navigation_screen.dart
+│   │       │
+│   │       └── widgets/
+│   │           └── delivery_task_card.dart
+│
+└── pubspec.yaml
+```
+## 🚀 Quick Start Guide
+
+Follow these steps to set up the project locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/mini-zomato-platform.git
+
+# Navigate to the project directory
+cd mini-zomato-platform
+
+# Get Flutter dependencies
+flutter pub get
+
+# Run the User app (repeat for other apps)
+flutter run
+```
