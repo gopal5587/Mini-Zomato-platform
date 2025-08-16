@@ -15,13 +15,11 @@ Streamlining the entire ordering lifecycle — from restaurant browsing to order
 ## 🔗 Quick Links
 - [👥 Team](#-team)
 - [📌 Project Overview](#-project-overview)
-- [✨ Key Highlights](#-what-makes-mini-zomato-special)
 - [⚡ Core Features](#-core-features)
 - [🎯 User Experiences](#-user-experiences)
 - [📁 Project Architecture](#-project-architecture)
 - [🚀 Quick Start Guide](#-quick-start-guide)
 - [🧪 Testing the Apps](#-testing-the-apps)
-- [📸 Screenshots](#-screenshots-coming-soon)
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
 
@@ -216,9 +214,9 @@ mini_zomato/
 ## 🚀 Quick Start Guide
 
 ## **📋 Prerequisites**
--Flutter SDK (version 3.x or higher)
--An IDE like VS Code or Android Studio
--A running emulator or a physical device
+- Flutter SDK (version 3.x or higher)
+- An IDE like VS Code or Android Studio
+- A running emulator or a physical device
 
 ### Follow these steps to set up the project locally:
 
@@ -240,18 +238,20 @@ To test a specific app, open ```bash lib/main.dart```  and set the ```bash home`
 
 ### 👤 User App:
 
--Screen: ```bash UserLoginScreen()```
--Credentials: Any non-empty email and a password of 6+ characters.
+- Screen: ```bash UserLoginScreen()```
+- Credentials: Any non-empty email and a password of 6+ characters.
 
 ### 👨‍💼 Restaurant App:
 
--  Screen: ```bash RestaurantLoginScreen()```
+- Screen: ```bash RestaurantLoginScreen()```
 - Credentials: ```bash test@restaurant.com / password```
 
 ### 🛵 Delivery Partner App:
 
--Screen: ```bash DeliveryPartnerLoginScreen()```
--Credentials: ```bash partner@test.com / password```
+- Screen: ```bash DeliveryPartnerLoginScreen()```
+- Credentials: ```bash partner@test.com / password```
+
+---
 
 ### 🤝 ***Contributing**
 Contributions are welcome! Please feel free to open an issue or submit a pull request.
