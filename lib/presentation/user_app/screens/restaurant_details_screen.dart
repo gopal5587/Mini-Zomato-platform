@@ -4,7 +4,7 @@ import 'package:mini_zomato/data/models/menu_item_model.dart';
 import 'package:mini_zomato/data/models/restaurant_model.dart';
 import 'package:mini_zomato/presentation/user_app/bloc/cart/cart_bloc.dart';
 import 'package:mini_zomato/presentation/user_app/bloc/menu/menu_bloc.dart';
-import 'package:mini_zomato/presentation/user_app/screens/cart_screen.dart'; // Import the new cart screen
+import 'package:mini_zomato/presentation/user_app/screens/cart_screen.dart'; 
 
 class RestaurantDetailsScreen extends StatelessWidget {
   final Restaurant restaurant;
@@ -20,7 +20,7 @@ class RestaurantDetailsScreen extends StatelessWidget {
       ),
       body: BlocProvider(
         create: (context) => MenuBloc()..add(FetchMenu(restaurantId: restaurant.id)),
-        // Use a Stack to overlay the "View Cart" banner
+       
         child: Stack(
           children: [
             BlocBuilder<MenuBloc, MenuState>(
@@ -32,7 +32,7 @@ class RestaurantDetailsScreen extends StatelessWidget {
                   return Center(child: Text('Error: ${state.message}'));
                 }
                 if (state is MenuSuccess) {
-                  // Add padding at the bottom to avoid overlapping with the cart banner
+                 
                   return ListView.builder(
                     padding: const EdgeInsets.fromLTRB(8.0, 8.0, 8.0, 80.0),
                     itemCount: state.menuItems.length,
@@ -45,7 +45,7 @@ class RestaurantDetailsScreen extends StatelessWidget {
                 return const Center(child: Text('Something went wrong!'));
               },
             ),
-            // Position the cart banner at the bottom
+            
             const Positioned(
               bottom: 0,
               left: 0,
@@ -134,7 +134,7 @@ class MenuItemCard extends StatelessWidget {
                 const SizedBox(height: 8.0),
                 ElevatedButton(
                   onPressed: () {
-                    // Dispatch the AddItemToCart event to the CartBloc.
+                    
                     context.read<CartBloc>().add(AddItemToCart(menuItem));
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
@@ -157,17 +157,17 @@ class MenuItemCard extends StatelessWidget {
   }
 }
 
-// A banner that shows the cart total and a button to view the cart.
+
 class ViewCartBanner extends StatelessWidget {
   const ViewCartBanner({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // Listen to the CartBloc to show/hide the banner.
+    
     return BlocBuilder<CartBloc, CartState>(
       builder: (context, state) {
         if (state.items.isEmpty) {
-          // Return an empty container if the cart is empty.
+         
           return const SizedBox.shrink();
         }
         return GestureDetector(

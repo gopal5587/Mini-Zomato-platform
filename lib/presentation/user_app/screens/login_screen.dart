@@ -127,7 +127,7 @@ class _LoginFormState extends State<LoginForm> {
               ),
               const SizedBox(height: 32.0),
               ElevatedButton(
-                // THE FIX IS ON THIS LINE: Changed context.watch to context.read
+                
                 onPressed: () =>
                     context.read<AuthBloc>().state is! AuthLoading
                         ? _onLoginPressed()

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mini_zomato/data/models/order_model.dart';
 import 'package:mini_zomato/presentation/user_app/bloc/order_history/order_history_bloc.dart';
-import 'package:intl/intl.dart'; // For date formatting
+import 'package:intl/intl.dart';
 
 class MyOrdersScreen extends StatelessWidget {
   const MyOrdersScreen({super.key});
@@ -81,7 +81,7 @@ class OrderHistoryCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  DateFormat.yMMMd().add_jm().format(order.orderDate), // e.g., Aug 16, 2025, 1:30 AM
+                  DateFormat.yMMMd().add_jm().format(order.orderDate), 
                   style: const TextStyle(color: Colors.grey, fontSize: 14),
                 ),
                 Text(
