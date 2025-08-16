@@ -1,10 +1,31 @@
 <div align="center">
 
-# 🚀 Mini Zomato - Flutter Food Delivery Platform
-A complete food delivery ecosystem built with Flutter & BLoC
+# 🚀 Mini Zomato - Flutter Food Delivery Platform  
+A complete food delivery ecosystem built with Flutter & BLoC  
 Streamlining the entire ordering lifecycle — from restaurant browsing to order placement, management, and delivery.
 
+![Flutter](https://img.shields.io/badge/Flutter-3.x-blue?logo=flutter)
+![BLoC](https://img.shields.io/badge/State%20Management-BLoC-green)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 </div>
+
+---
+
+## 🔗 Quick Links
+- [👥 Team](#-team)
+- [📌 Project Overview](#-project-overview)
+- [✨ Key Highlights](#-what-makes-mini-zomato-special)
+- [⚡ Core Features](#-core-features)
+- [🎯 User Experiences](#-user-experiences)
+- [📁 Project Architecture](#-project-architecture)
+- [🚀 Quick Start Guide](#-quick-start-guide)
+- [🧪 Testing the Apps](#-testing-the-apps)
+- [📸 Screenshots](#-screenshots-coming-soon)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+
+---
 
 ## 👥 Team
 <table align="center">
@@ -13,112 +34,84 @@ Streamlining the entire ordering lifecycle — from restaurant browsing to order
 </tr>
 </table>
 
+---
+
 ## 📌 Project Overview
-Mini Zomato is a comprehensive food delivery system that revolutionizes the ordering experience for users, restaurants, and delivery partners. Built with modern mobile technologies, it provides a clean user interface, robust state management using the BLoC pattern, and a scalable, feature-driven architecture.
+*Mini Zomato* is a complete food delivery ecosystem built with *Flutter* & *BLoC* that provides a seamless experience for *Customers, Restaurant Owners, and Delivery Partners*.  
 
-## 🎯 What Makes Mini Zomato Special?
-✅ Triple-App Architecture - Separate, tailored experiences for Customers, Restaurant Owners, and Delivery Partners within a single ecosystem.
+It features:  
+- Modern & responsive *UI/UX*  
+- Robust *state management* with BLoC  
+- Scalable *feature-driven architecture*  
+- Built with a *mock-first development* approach for testing without backend dependencies  
 
-✅ Robust State Management - Utilizes the BLoC pattern for predictable and maintainable state logic, ensuring a smooth and responsive user experience.
+---
 
-✅ Clean Architecture - A clear separation of concerns between the UI (Presentation), business logic (BLoC), and data layers, making the codebase scalable and easy to manage.
+## ✨ What Makes Mini Zomato Special?
+✅ *Triple-App Architecture* — Tailored apps for Customers, Restaurant Owners, and Delivery Partners within a single project.  
 
-✅ Mock-First Development - Built and tested with mock data, allowing for complete UI and logic validation without backend dependencies.
+✅ *Robust State Management* — Built with BLoC for predictable and maintainable state logic.  
 
-## 🛠 Technology Stack
-<div align="center">
+✅ *Clean Architecture* — Proper separation of UI, Business Logic, and Data layers.  
 
-## Mobile Ecosystem
-State Management & Tooling
-</div>
+✅ *Mock-First Development* — Fully testable UI and flows without backend integration.  
+
+---
 
 ## ⚡ Core Features
 <div align="center">
 
-📱 User App
+### 📱 User App
+- Secure User Login  
+- Restaurant Discovery  
+- Detailed Menu Viewing  
+- Cart Management  
+- Seamless Order Placement  
+- Past Order History  
 
-🏪 Restaurant App
+### 🏪 Restaurant App
+- Restaurant Partner Login  
+- Incoming Order Dashboard  
+- Accept / Reject Orders  
+- Full Menu Management (Add, Edit, Delete)  
 
-🛵 Delivery Partner App
-
-Secure User Login
-
-Restaurant Partner Login
-
-Delivery Partner Login
-
-Restaurant Discovery
-
-Incoming Order Dashboard
-
-View Assigned Orders
-
-Detailed Menu Viewing
-
-Accept/Reject Orders
-
-Update Delivery Status
-
-Cart Management
-
-Full Menu Management
-
-Mock Navigation View
-
-Seamless Order Placement
-
-Add, Edit & Delete Items
-
-
-
-Past Order History
-
-
-
-
+### 🛵 Delivery Partner App
+- Delivery Partner Login  
+- Assigned Orders Dashboard  
+- Mock Navigation View  
+- Update Delivery Status  
 
 </div>
 
-🎯 User Experiences
-👤 Customer Journey:
+---
 
-🔐 Log in securely to the platform.
+## 🎯 User Experiences
 
-🍽 Browse a list of available restaurants.
+### 👤 Customer Journey
+1. 🔐 Log in securely  
+2. 🍽 Browse restaurants  
+3. 📜 View menus & add items to cart  
+4. 🛒 Manage cart with real-time updates  
+5. ✅ Place orders & get confirmations  
+6. 📄 View complete past order history  
 
-📜 View detailed menus and add items to the cart.
+### 👨‍💼 Restaurant Owner Journey
+1. 🔐 Log in to partner dashboard  
+2. 🔔 View incoming orders  
+3. 👍👎 Accept or reject orders  
+4. 📝 Manage menu (Add/Delete items)  
 
-🛒 Manage items in the cart and see the total price update in real-time.
+### 🛵 Delivery Partner Journey
+1. 🔐 Log in to partner portal  
+2. 🗺 View assigned orders with pickup & delivery details  
+3. 📍 Use mock navigation for delivery  
+4. ✅ Mark orders as “Delivered”  
 
-✅ Place the order and receive a confirmation.
+---
 
-📄 View a complete history of all past orders.
+## 📁 Project Architecture
 
-👨‍💼 Restaurant Owner Journey:
-
-🔐 Log in to the restaurant partner dashboard.
-
-🔔 View a list of new, incoming orders from customers.
-
-👍👎 Accept or reject orders with the tap of a button.
-
-📝 Access the menu management screen to view the current menu.
-
-➕ Add new items or 🗑 delete existing items from the menu.
-
-🛵 Delivery Partner Journey:
-
-🔐 Log in to the delivery partner portal.
-
-🗺 View a list of assigned orders with pickup and delivery details.
-
-🗺 Open a mock navigation view to see the delivery route.
-
-✅ Mark orders as "Delivered" to update their status.
-
-📁 Project Architecture
-The project follows a clean, feature-driven folder structure that separates concerns effectively.
-
+```bash
 mini_zomato/
 └── lib/
     ├── data/
@@ -140,69 +133,3 @@ mini_zomato/
         └── delivery_partner_app/
             ├── bloc/
             └── screens/
-
-🚀 Quick Start Guide
-📋 Prerequisites
-Flutter SDK (version 3.x or higher)
-
-An IDE like VS Code or Android Studio
-
-A running emulator or a physical device
-
-⚙ Installation & Setup
-Clone the repository
-
-git clone https://github.com/your-username/mini-zomato-platform.git
-cd mini-zomato-platform
-
-Install dependencies
-
-flutter pub get
-
-Run the application
-
-flutter run
-
-🧪 Testing the Apps
-To test a specific app, open lib/main.dart and set the home property to the desired login screen.
-
-👤 User App:
-
-Screen: UserLoginScreen()
-
-Credentials: Any non-empty email and a password of 6+ characters.
-
-👨‍💼 Restaurant App:
-
-Screen: RestaurantLoginScreen()
-
-Credentials: test@restaurant.com / password
-
-🛵 Delivery Partner App:
-
-Screen: DeliveryPartnerLoginScreen()
-
-Credentials: partner@test.com / password
-
-🤝 Contributing
-Contributions are welcome! Please feel free to open an issue or submit a pull request.
-
-Fork the repository
-
-Create your feature branch (git checkout -b feature/AmazingFeature)
-
-Commit your changes (git commit -m 'Add some AmazingFeature')
-
-Push to the branch (git push origin feature/AmazingFeature)
-
-Open a Pull Request
-
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-<div align="center">
-
-🌟 Star this repository if you found it helpful!
-Built with ❤ by Gopal
-
-</div>
