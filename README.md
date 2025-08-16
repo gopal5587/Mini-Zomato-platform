@@ -1,153 +1,278 @@
-Mini Zomato - Flutter BLoC Food Delivery Platform
-A comprehensive food delivery ecosystem built with Flutter, featuring three distinct applications for users, restaurants, and delivery partners. This project demonstrates a clean, scalable architecture using the BLoC pattern for state management.
 
-📖 Project Overview
-The objective of this project is to develop a basic, yet functional, food delivery system that mimics the core functionalities of platforms like Zomato or Swiggy. The system is divided into three separate mobile applications, each tailored to its specific user role:
+<div align="center">
 
-User App: Allows customers to browse restaurants, view menus, place orders, and track their order history.
+# 🚀 Mini Zomato - Flutter Food Delivery Platform  
+A complete food delivery ecosystem built with Flutter & BLoC  
+Streamlining the entire ordering lifecycle — from restaurant browsing to order placement, management, and delivery.
 
-Restaurant App: Enables restaurant owners to manage their menu, view incoming orders, and accept or reject them.
+![Flutter](https://img.shields.io/badge/Flutter-3.x-blue?logo=flutter)
+![BLoC](https://img.shields.io/badge/State%20Management-BLoC-green)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-Delivery Partner App: Provides delivery personnel with a list of assigned orders, delivery details, and the ability to update order status.
+</div>
 
-This project emphasizes clean architecture, modularity, and robust state management using the BLoC pattern.
+---
 
-✨ Features
-📱 User App (Customer)
-[x] Authentication: Secure login flow for users.
+## 🔗 Quick Links
+- [👥 Team](#-team)
+- [📌 Project Overview](#-project-overview)
+- [⚡ Core Features](#-core-features)
+- [🎯 User Experiences](#-user-experiences)
+- [📁 Project Architecture](#-project-architecture)
+- [🚀 Quick Start Guide](#-quick-start-guide)
+- [🧪 Testing the Apps](#-testing-the-apps)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
-[x] Restaurant Listing: Fetches and displays a list of available restaurants.
+---
 
-[x] Menu Viewing: View detailed menus for each restaurant.
+## 👥 Team
+<table align="center">
+<tr>
+<td align="center"><strong>🎯 Gopal</strong><br><em>Project Lead & Developer</em></td>
+</tr>
+</table>
 
-[x] Cart Management: Add/remove items from the cart and view the total price.
+---
 
-[x] Order Placement: Place food orders from the cart.
+## 📌 Project Overview
+*Mini Zomato* is a complete food delivery ecosystem built with *Flutter* & *BLoC* that provides a seamless experience for *Customers, Restaurant Owners, and Delivery Partners*.  
 
-[x] Order History: View a list of past orders.
+It features:  
+- Modern & responsive *UI/UX*  
+- Robust *state management* with BLoC  
+- Scalable *feature-driven architecture*  
+- Built with a *mock-first development* approach for testing without backend dependencies  
 
-🏪 Restaurant App
-[x] Authentication: Secure login for restaurant partners.
 
-[x] Order Dashboard: View a real-time list of incoming customer orders.
 
-[x] Order Status Control: Accept or reject new orders.
+## ✨ What Makes Mini Zomato Special?
+✅ *Triple-App Architecture* — Tailored apps for Customers, Restaurant Owners, and Delivery Partners within a single project.  
 
-[x] Menu Management: Add, edit, or delete menu items.
+✅ *Robust State Management* — Built with BLoC for predictable and maintainable state logic.  
 
-🛵 Delivery Partner App
-[x] Authentication: Secure login for delivery partners.
+✅ *Clean Architecture* — Proper separation of UI, Business Logic, and Data layers.  
 
-[x] Assigned Orders: View a list of current delivery tasks.
+✅ *Mock-First Development* — Fully testable UI and flows without backend integration.  
 
-[x] Order Status Update: Mark orders as "Picked Up" or "Delivered".
+---
 
-[x] Navigation: Basic map interface to view the delivery route (mocked).
+## ⚡ Core Features
+<div>
 
-🛠 Tech Stack & Architecture
-Core Technologies
-Framework: Flutter 3.x
+### 📱 User App
+- Secure User Login  
+- Restaurant Discovery  
+- Detailed Menu Viewing  
+- Cart Management  
+- Seamless Order Placement  
+- Past Order History  
 
-Language: Dart
+### 🏪 Restaurant App
+- Restaurant Partner Login  
+- Incoming Order Dashboard  
+- Accept / Reject Orders  
+- Full Menu Management (Add, Edit, Delete)  
 
-State Management: BLoC (flutter_bloc package)
+### 🛵 Delivery Partner App
+- Delivery Partner Login  
+- Assigned Orders Dashboard  
+- Mock Navigation View  
+- Update Delivery Status  
 
-Value Equality: equatable
+</div>
 
-Date Formatting: intl
+---
 
-Architecture: BLoC & Clean Architecture
-This project follows a clean, scalable architecture inspired by the principles of Clean Architecture, tailored for a Flutter BLoC implementation. The codebase is organized into distinct layers to separate concerns, making it easier to maintain, test, and scale.
+## 🎯 User Experiences
 
-lib/
+### 👤 Customer Journey
+1. 🔐 Log in securely  
+2. 🍽 Browse restaurants  
+3. 📜 View menus & add items to cart  
+4. 🛒 Manage cart with real-time updates  
+5. ✅ Place orders & get confirmations  
+6. 📄 View complete past order history  
 
-data/ (Data Layer):
+### 👨‍💼 Restaurant Owner Journey
+1. 🔐 Log in to partner dashboard  
+2. 🔔 View incoming orders  
+3. 👍👎 Accept or reject orders  
+4. 📝 Manage menu (Add/Delete items)  
 
-models/: Contains the plain Dart objects (e.g., UserModel, Restaurant, Order) that represent the application's data structure.
+### 🛵 Delivery Partner Journey
+1. 🔐 Log in to partner portal  
+2. 🗺 View assigned orders with pickup & delivery details  
+3. 📍 Use mock navigation for delivery  
+4. ✅ Mark orders as “Delivered”  
 
-repositories/: (Conceptual) Abstract contracts for fetching and manipulating data.
+---
 
-data_sources/: (Conceptual) Concrete implementations for fetching data, whether from a remote API or a local database. For this project, this layer is mocked directly within the BLoCs.
+## 📁 Project Architecture
 
-presentation/ (Presentation Layer):
+```bash
+mini_zomato/
+├── lib/
+│   ├── main.dart
+│   │
+│   ├── core/                  
+│   │   ├── constants/
+│   │   │   └── app_constants.dart
+│   │   ├── theme/
+│   │   │   └── app_theme.dart
+│   │   └── utils/
+│   │       └── ...
+│   │
+│   ├── data/                
+│   │   ├── models/
+│   │   │   ├── user_model.dart
+│   │   │   ├── restaurant_model.dart
+│   │   │   ├── menu_item_model.dart
+│   │   │   ├── order_model.dart
+│   │   │   └── ...
+│   │   │
+│   │   ├── repositories/
+│   │   │   ├── auth_repository.dart
+│   │   │   ├── restaurant_repository.dart
+│   │   │   └── order_repository.dart
+│   │   │
+│   │   └── data_sources/
+│   │       ├── remote/
+│   │       │   └── api_service.dart  
+│   │       └── local/
+│   │           └── ...            
+│   │
+│   ├── presentation/         
+│   │   │
+│   │   ├── user_app/
+│   │   │   ├── bloc/
+│   │   │   │   ├── auth/
+│   │   │   │   │   ├── auth_bloc.dart
+│   │   │   │   │   ├── auth_event.dart
+│   │   │   │   │   └── auth_state.dart
+│   │   │   │   ├── restaurant_list/
+│   │   │   │   │   └── ...
+│   │   │   │   ├── menu/
+│   │   │   │   │   └── ...
+│   │   │   │   ├── cart/
+│   │   │   │   │   └── ...
+│   │   │   │   ├── order/
+│   │   │   │   │   └── ...
+│   │   │   │   └── order_history/
+│   │   │   │       └── ...
+│   │   │   │
+│   │   │   ├── screens/
+│   │   │   │   ├── login_screen.dart
+│   │   │   │   ├── home_screen.dart
+│   │   │   │   ├── restaurant_details_screen.dart
+│   │   │   │   ├── cart_screen.dart
+│   │   │   │   └── my_orders_screen.dart
+│   │   │   │
+│   │   │   └── widgets/
+│   │   │       ├── restaurant_card.dart
+│   │   │       └── menu_item.dart
+│   │   │
+│   │   ├── restaurant_app/
+│   │   │   ├── bloc/
+│   │   │   │   ├── auth/
+│   │   │   │   │   └── ...
+│   │   │   │   ├── incoming_orders/
+│   │   │   │   │   └── ...
+│   │   │   │   ├── order_action/
+│   │   │   │   │   └── ...
+│   │   │   │   └── menu_management/
+│   │   │   │       └── ...
+│   │   │   │
+│   │   │   ├── screens/
+│   │   │   │   ├── login_screen.dart
+│   │   │   │   ├── dashboard_screen.dart
+│   │   │   │   └── menu_management_screen.dart
+│   │   │   │
+│   │   │   └── widgets/
+│   │   │       └── order_card.dart
+│   │   │
+│   │   └── delivery_partner_app/
+│   │       ├── bloc/
+│   │       │   ├── auth/
+│   │       │   │   └── ...
+│   │       │   ├── delivery_orders/
+│   │       │   │   └── ...
+│   │       │   ├── delivery_status/
+│   │       │   │   └── ...
+│   │       │   └── map/
+│   │       │       └── ...
+│   │       │
+│   │       ├── screens/
+│   │       │   ├── login_screen.dart
+│   │       │   ├── assigned_orders_screen.dart
+│   │       │   └── navigation_screen.dart
+│   │       │
+│   │       └── widgets/
+│   │           └── delivery_task_card.dart
+│
+└── pubspec.yaml
+```
+---
+## 🚀 Quick Start Guide
 
-bloc/: The heart of the application's business logic. Each feature has its own BLoC, which manages state by processing events and emitting new states.
+## **📋 Prerequisites**
+- Flutter SDK (version 3.x or higher)
+- An IDE like VS Code or Android Studio
+- A running emulator or a physical device
 
-screens/: The UI widgets that represent full pages in the application. These widgets listen to BLoC state changes and rebuild accordingly.
+### Follow these steps to set up the project locally:
 
-widgets/: Reusable smaller UI components (e.g., RestaurantCard, MenuItem) used across different screens.
+```bash
+# Clone the repository
+git clone https://github.com/gopal5587/Mini-Zomato-platform.git
 
-core/: (Conceptual) Contains shared utilities, constants, themes, or extensions used throughout the application.
+# Navigate to the project directory
+cd mini-zomato-platform
 
-This structure ensures that the UI (screens) is completely decoupled from the data sources, with the bloc layer acting as the bridge between them.
-
-🚀 Getting Started
-Prerequisites
-Flutter SDK (version 3.x or higher)
-
-Dart SDK
-
-An IDE like VS Code or Android Studio
-
-A running emulator or a physical device
-
-Installation & Setup
-Clone the repository:
-
-git clone https://github.com/your-username/mini-zomato-flutter.git
-cd mini-zomato-flutter
-
-Install dependencies:
-
+# Get Flutter dependencies
 flutter pub get
 
-Run the application:
-
+# Run the User app (repeat for other apps)
 flutter run
+```
+---
+###  **🧪 Testing the Apps**
+To test a specific app, open ```bash lib/main.dart```  and set the ```bash home``` property to the desired login screen.
 
-🧪 How to Test
-The application is built with mock data, so no backend setup is required for testing. To test a specific app, you need to set it as the initial screen in lib/main.dart.
+### 👤 User App:
 
-To Test the User App:
-In lib/main.dart, set home: const UserLoginScreen().
+- Screen: ```bash UserLoginScreen()```
+- Credentials: Any non-empty email and a password of 6+ characters.
 
-Run the app.
+### 👨‍💼 Restaurant App:
 
-Credentials: Use any non-empty email and a password of 6+ characters.
+- Screen: ```bash RestaurantLoginScreen()```
+- Credentials: ```bash test@restaurant.com / password```
 
-To Test the Restaurant App:
-In lib/main.dart, set home: const RestaurantLoginScreen().
+### 🛵 Delivery Partner App:
 
-Run the app.
+- Screen: ```bash DeliveryPartnerLoginScreen()```
+- Credentials: ```bash partner@test.com / password```
 
-Credentials:
+---
 
-Email: test@restaurant.com
+### 🤝 ***Contributing**
+Contributions are welcome! Please feel free to open an issue or submit a pull request.
 
-Password: password
+1. Fork the repository
+2. Create your feature branch (```bash git checkout -b feature/AmazingFeature```)
+3. Commit your changes (```bash git commit -m 'Add some AmazingFeature'```)
+4. Push to the branch (```bash git push origin feature/AmazingFeature```)
+5. Open a Pull Request
 
-To Test the Delivery Partner App:
-In lib/main.dart, set home: const DeliveryPartnerLoginScreen().
+---
+### 📄 **License**
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+---
+<div align="center">
 
-Run the app.
+### **🌟 Star this repository if you found it helpful!**
+**Built with ❤ by Gopal**
 
-Credentials:
+</div>
 
-Email: partner@test.com
-
-Password: password
-
-🔮 Future Improvements (Bonus Features)
-This project provides a solid foundation. The following features can be added to make it a production-ready application:
-
-Firebase Integration: Replace mock data with Firebase (Auth, Firestore) for a real-time backend.
-
-Push Notifications: Implement notifications for order status updates (e.g., "Your order has been accepted").
-
-Real-time Updates: Use streams from Firestore to update the UI in real-time without manual refreshing.
-
-Responsive UI: Ensure the design is fully responsive for different screen sizes (mobile/tablet).
-
-Live Location Tracking: Integrate a map service like Google Maps for live delivery tracking.
-
-Unit & Widget Testing: Write comprehensive tests for BLoCs and widgets.
