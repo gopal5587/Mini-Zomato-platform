@@ -237,26 +237,22 @@ flutter run
 ```
 ---
 ###  **🧪 Testing the Apps**
-To test a specific app, open ```
-lib/main.dart
-```  and set the ```bash 
-home
-``` property to the desired login screen.
+To test a specific app, open `lib/main.dart` and set the `home` property to the desired login screen.
 
 ### 👤 User App:
 
-- Screen: ```bash UserLoginScreen()```
+- Screen: `UserLoginScreen()`
 - Credentials: Any non-empty email and a password of 6+ characters.
 
 ### 👨‍💼 Restaurant App:
 
-- Screen: ```bash RestaurantLoginScreen()```
-- Credentials: ```bash test@restaurant.com / password```
+- Screen: `RestaurantLoginScreen()`
+- Credentials: `test@restaurant.com / password`
 
 ### 🛵 Delivery Partner App:
 
-- Screen: ```bash DeliveryPartnerLoginScreen()```
-- Credentials: ```bash partner@test.com / password```
+- Screen: `DeliveryPartnerLoginScreen()`
+- Credentials: `partner@test.com / password`
 
 ---
 
@@ -264,9 +260,9 @@ home
 Contributions are welcome! Please feel free to open an issue or submit a pull request.
 
 1. Fork the repository
-2. Create your feature branch (```bash git checkout -b feature/AmazingFeature```)
-3. Commit your changes (```bash git commit -m 'Add some AmazingFeature'```)
-4. Push to the branch (```bash git push origin feature/AmazingFeature```)
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
 ---
